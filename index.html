@@ -29,6 +29,12 @@
 <script>
   var GALLERIA = 'https://script.google.com/a/macros/filarmonicadimorbegno.it/s/AKfycbzc4Co_U37TdtsgySee1OD_Hx_vCDjg2qflY_WBiEsnIra3K_jhR1qk3J_Cx-2CGujm/exec';
   document.getElementById('galleria').src = GALLERIA + location.search;
+
+  // iPhone/Safari: con lo swipe indietro la pagina viene ripresa dalla cache (bfcache)
+  // e l'iframe della galleria resta "congelato", senza più scorrere. In quel caso la ricarichiamo.
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) location.reload();
+  });
 </script>
 <noscript><a href="https://script.google.com/a/macros/filarmonicadimorbegno.it/s/AKfycbzc4Co_U37TdtsgySee1OD_Hx_vCDjg2qflY_WBiEsnIra3K_jhR1qk3J_Cx-2CGujm/exec">Apri l'archivio fotografico</a></noscript>
 </body>
