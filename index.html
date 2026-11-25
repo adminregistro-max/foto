@@ -21,13 +21,15 @@
 </head>
 <body>
 <!-- La galleria vera gira su Google Apps Script: questa pagina la mostra a tutto schermo
-     e passa all'interno i parametri dell'indirizzo (?g=evento, &p=foto). -->
+     e passa all'interno i parametri dell'indirizzo (?g=evento, &p=foto).
+     Si usa l'indirizzo /a/macros/<dominio>/ perché quello generico /macros/s/ si rompe
+     ("Impossibile aprire il file") quando nel browser sono aperti più account Google. -->
 <iframe id="galleria" title="Archivio fotografico della Società Filarmonica di Morbegno APS"
         allow="fullscreen; clipboard-write; web-share; autoplay" allowfullscreen></iframe>
 <script>
-  var GALLERIA = 'https://script.google.com/macros/s/AKfycbzc4Co_U37TdtsgySee1OD_Hx_vCDjg2qflY_WBiEsnIra3K_jhR1qk3J_Cx-2CGujm/exec';
+  var GALLERIA = 'https://script.google.com/a/macros/filarmonicadimorbegno.it/s/AKfycbzc4Co_U37TdtsgySee1OD_Hx_vCDjg2qflY_WBiEsnIra3K_jhR1qk3J_Cx-2CGujm/exec';
   document.getElementById('galleria').src = GALLERIA + location.search;
 </script>
-<noscript><a href="https://script.google.com/macros/s/AKfycbzc4Co_U37TdtsgySee1OD_Hx_vCDjg2qflY_WBiEsnIra3K_jhR1qk3J_Cx-2CGujm/exec">Apri l'archivio fotografico</a></noscript>
+<noscript><a href="https://script.google.com/a/macros/filarmonicadimorbegno.it/s/AKfycbzc4Co_U37TdtsgySee1OD_Hx_vCDjg2qflY_WBiEsnIra3K_jhR1qk3J_Cx-2CGujm/exec">Apri l'archivio fotografico</a></noscript>
 </body>
 </html>
