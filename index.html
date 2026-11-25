@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Archivio fotografico · Società Filarmonica di Morbegno APS</title>
+<meta name="description" content="Concerti, prove e feste della Società Filarmonica di Morbegno APS: i nostri momenti, da rivedere e condividere.">
+<meta name="theme-color" content="#f4efe4">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Archivio fotografico · Società Filarmonica di Morbegno APS">
+<meta property="og:description" content="Concerti, prove e feste: i nostri momenti, da rivedere e condividere.">
+<meta property="og:image" content="https://foto.filarmonicadimorbegno.it/anteprima.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icona-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icona-192.png">
+<link rel="apple-touch-icon" href="icona-180.png">
+<style>
+  html, body { margin: 0; height: 100%; background: #f4efe4; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+  noscript a { display: block; padding: 32px; font: 18px Georgia, serif; color: #2d2a26; }
+</style>
+</head>
+<body>
+<!-- La galleria vera gira su Google Apps Script: questa pagina la mostra a tutto schermo
+     e passa all'interno i parametri dell'indirizzo (?g=evento, &p=foto). -->
+<iframe id="galleria" title="Archivio fotografico della Società Filarmonica di Morbegno APS"
+        allow="fullscreen; clipboard-write; web-share; autoplay" allowfullscreen></iframe>
+<script>
+  var GALLERIA = 'https://script.google.com/macros/s/AKfycbzc4Co_U37TdtsgySee1OD_Hx_vCDjg2qflY_WBiEsnIra3K_jhR1qk3J_Cx-2CGujm/exec';
+  document.getElementById('galleria').src = GALLERIA + location.search;
+</script>
+<noscript><a href="https://script.google.com/macros/s/AKfycbzc4Co_U37TdtsgySee1OD_Hx_vCDjg2qflY_WBiEsnIra3K_jhR1qk3J_Cx-2CGujm/exec">Apri l'archivio fotografico</a></noscript>
+</body>
+</html>
